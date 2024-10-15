@@ -1,0 +1,640 @@
+:: StoryTitle
+Contos da Anomalia 1.0
+
+
+:: StoryData
+{
+  "ifid": "E5975B25-8FD1-4414-AC8A-F59B0D239951",
+  "format": "Harlowe",
+  "format-version": "3.3.8",
+  "start": "Entrar no Jogo",
+  "tag-colors": {
+    "tempo-1": "yellow",
+    "tempo-2": "orange",
+    "MAPA": "blue"
+  },
+  "zoom": 0.6
+}
+
+
+:: 101 {"position":"225,825","size":"100,100"}
+(if: $tempo is 0)[(set: $tempo to $tempo + 1)](set: $aptm101 to true)
+(text-colour:grey)[Timérius acha um cartão de uma pizzaria perto dali. Em um papel em uma das gavetas da estante da sala, acha o que poderia ser o número de telefone de Kátia. 
+(button:)[[Gomes Freire, número 7]]
+(button:)[(link-undo:"voltar")]
+]
+
+
+:: 103 {"position":"225,950","size":"100,100"}
+(if: $tempo is 0)[(set: $tempo to $tempo + 1)](set: $aptm103 to true)
+(text-colour:grey)[Ferreira manda Timérius de novo ao prédio, mas agora para falar com o vizinho do 103.
+Ele diz que uma pessoa tocou o interfone dizendo que era parente do morador do 101, mas que ele não estava atendendo.
+
+(button:)[[101]]
+(button:)[[Gomes Freire, número 7]] 
+(button:)[(link-undo:"voltar")]
+]
+
+
+:: Antiga casa de Kátia {"position":"400,1175","size":"100,100"}
+(set: $tempo to 4)
+<====>
+A polícia cerca o prédio, mas ainda não sabem se estão no lugar certo. Timérius e quatro policiais entram no prédio e sobem as escadas até o segundo andar, onde fica o antigo apartamento onde Kátia morava quando namorou com Jaime. O apartamento havia sido vendido recentemente e descobriu-se logo na entrada que o fora comprado por Jaime. Pois dentro do escaninho do apartamento tinha uma conta endereçada ao próprio. A cabeça de Timérius não parava de pensar. O sentimento doentio de Jaime o fez comprar a casa onde tinha convivido com Kátia. E agora lá dentro com a ela à força. Mais o marginal não ofereceu resistência. Kátia estava bem, embora assustada. Foi levada direto para o Hospital, onde poderia receber cuidados médicos e ver o seu querido irmão.
+
+Caso Resolvido.
+(button:)[[Caso 1 - Delegacia]] 
+
+
+:: Bar ao lado {"position":"1075,1225","size":"100,100"}
+Ninguém sabe de nada.
+
+
+
+
+(button:)[[Rua da Constituição]] 
+
+
+:: Caderno de Anotações {"position":"850,725","size":"100,100"}
+==><==
+<img src="https://i.pinimg.com/originals/d4/35/06/d43506034cc0c5bd36213f6a2f769a7e.png" width="100">
+
+
+
+
+
+####Anotações: <!--crie variáveis para cada pista e coloque como item aqui nas anotações-->
+<====>
+{(text-colour:(hsl:60,0.8039,0.5,0.5))[(if: $aptm101 is true)[→ Timérius acha um cartão de uma pizzaria perto dali. Em um papel em uma das gavetas da estante da sala, acha o que poderia ser o número de telefone de Kátia.  ]
+(if: $aptm103 is true)[→ O vizinho do 103 diz que uma pessoa tocou o interfone dizendo que era parente do morador do 101, mas que ele não estava atendendo.  
+]
+(if: $cameraBar is true)[→ Pelas câmeras do bar eles conseguiram ver o suspeito. Mancava da perna esquerda.[[Bar em frente ao prédio de Amilcar|bar]]  ]
+(if: $orlando is true)[→ Orlando conhece o Amilcar. Mora ali por perto.[[Orlando]]  ]
+(if: $pizzaria is true)[→ Amilcar trabalhava na pizzaria até algumas semanas atrás.[[pizzaria]]  ]
+(if: $taki is true)[→ Um recibo de uma loja de material de construção chamada Takí com um número de telefone escrito a lápis no verso, salpicado de sangue.  ]
+(if: $cameraTaki is true)[→ A câmera do estabelecimento gravou quando Amilcar, visivelmente nervoso, entrou e alguém ficou esperando do lado de fora. Não era possível ver o seu rosto, mas foi possível intentificar o andar peculiar do criminoso, mancando da perna esquerda. O atendendte da loja também disse que o suspeito acompanhando Amilcar era loiro.  ]
+(if: $katia is true)[→ Kátia, a irmã da vítima.
+Em seus registros, descobrem que ela mora também no centro da cidade, muito próximo dalí. Trabalha numa empresa perto da rua da carioca, mas está de férias há algumas semanas. Sem contato por telefone ou mensagem, está num vilarejo do interior do Rio onde o sinal de telefonia é quase inexistente.  ]
+(if: $apartamentoKatia is true)[→ [[Apartamento da Kátia|apartamento de Kátia]]  ]
+(if: $papel is true)[→ O papel: um recibo de uma loja de material de construção chamada Takí com um número de telefone escrito a lápis no verso, salpicado de sangue.
+A perícia descobriu que os números no papel ensanguentado correspondem ao número da pizzaria da qual Timérius achara o cartão no apartamento de Amilcar.  ]
+(if: $hospital is 0)[→ Amilcar está em coma induzido.  ]
+(else-if: $hospital is 1)[→ Amilcar acordou algumas vezes chamando constantemente a irmã, mas ainda não está estavel.  ]
+(else-if: $hospital is 2)[→ Amilcar está lúcido. Ele conta que o ex-namorado de Kátia que o secrestrou e agrediu.  ]]}
+
+
+
+---
+==><==
+(text-style:"fade-in-out")[(button:)[(text-colour:gray)[Resumo do caso:]]]
+<====>
+(click: "Resumo do caso:")[
+(text-colour:grey)[Um homem ligou para a polícia dizendo ser zelador de um prédio no centro da cidade localizado na Rua Gomes Freire, número 7 — esquina com Av. Rio Branco. 
+Ele contou que achara um dos moradores mortos. Seu nome, Amilcar Cordeiro. 
+O zelador, de nome Aguinaldo, não tinha muita coisa a relatar. Apenas que no dia anterior uma pessoa havia interfonado para o apartamento 103. 
+=><===
+<img src="https://i.pinimg.com/originals/33/fe/28/33fe28b444677949f7f8be6f40db0563.jpg" width=150%>
+<====>
+Timérius chegou quinze minutos depois. Número do apartamento da ocorrência: 101. O policial civil foi o primeiro a adentrar no recinto. No meio da sala, virado para a janela que dava para o fundo mal iluminado e sem janelas de um outro prédio, estava o homem mal amarrado a uma cadeira. O policial sacou a arma e examinou os outros cômodos, sem que nada lhe chamasse a atenção. 
+Finalmente se aproximou da vítima. Sua posição, cuja cabeça e parte do corpo estavam caidos para o lado direito, parecia estar forçando o centro de gravidade e prestes a se derrubar no chão com a cadeira. Depois de um breve exame, percebeu que havia um papel ensanguentado dentro do bolso de sua camisa. Ao fazer o movimento para pegá-lo, Timérius quase caiu para trás pelo tremendo susto que levou. O cadaver voltou a vida, dando um berro no pé do seu ouvido. Estava todo ensanguentado, com o nariz quebrado e o que pareciam ser queimaduras de cigarro no antebraço. 
+Ainda se recuperava do sumbido, quando se viu agarrando o homem que gritava o nome Kátia. Os quatro peritos apareceram correndo para auxiliá-lo. Dois deles colocaram-no em uma maca e o levaram para o Hospital Souza Aguiar. 
+Timérius respirou fundo, olhou para os outros dois peritos que ali ficaram e, sem dizer nenhuma palavra, continuou no exame da cena. Haviam dois tipos de pegadas no chão, mas eram desconcertantes. O que conseguiu distinguir foi que uma era de sapato social e a outra de tênis. Num exame mais minucioso, ele percebeu que as de sapato só tinham marcar de pés esquerdos e a do tênis só tinham de pés direitos. Pensou um pouco sem enxergar um motivo claro para isso.
+Olhou as estantes. Havia alguns porta-retratos e em quase todos a vítima estava com um mulher, muito parecida com ele. Silvestre presumiu ser sua irmã. Seria ela a tal Kátia?]]
+
+
+==><==
+<img src="https://i.pinimg.com/originals/d4/35/06/d43506034cc0c5bd36213f6a2f769a7e.png" width=50%>
+
+(button:)[(link-undo: "voltar")]
+
+
+:: Casa de Junior Navalha {"position":"375,1750","size":"100,100"}
+Na casa de Navalha, acham o próprio. Timérius deve perguntar sobre Jaime e o que ele sabe vai ajudar a resolver o caso. Só passando por ele, se descobre o q aconteceu com Amilcar. Foi uma armação de Jaime contra Amilcar. Em represália por ele impedir que Jaime se relacionasse com sua irmã. Navalha devia uns favores para Jaime, então o ajudou arrumando uma confusão na pizzaria com Amilcar para que ele fosse mandado embora do trabalho. Isso é tudo o que Navalha sabia.
+(button:)[[Regente Feijó]] 
+(button:)[[Caso 1 - Delegacia]] 
+
+
+:: Caso 1 - Delegacia {"position":"525,600","size":"200,200"}
+<!--colocar um mapa da parte do centro da cidade correspondente ao local que se passa o jogo. isso vai ajudar o jogador a se localizar e tb se desafiar a explorar as ruas se quiser e precisar.-->
+<!--
+- Contar o caso
+- Criar imput para o jogador escrever busca
+- colocar busca numa variavel
+- se a busca for válida, exibir resultados 
+- se a busca estiver vazia ou não for válida, não exibir resultado
+-->
+=><===
+<img src="https://i.pinimg.com/originals/c2/8e/36/c28e365d378f9ff03342e1ddc3926df0.png" width=150%>
+
+<====>
+(if: $tempo is 0)[
+<====>
+(text-colour:(hsl:60,0.8039,0.5,0.5))[//No departamento de polícia, a delegada Ferreira lutava para sair do elevador com sua cadeira de rodas. 
+Logo, um dos novatos chamado Jonas veio ajudá-la. 
+A delegada o agradeçeu enquanto era conduzida por entre as mesas e policiais trabalhando.
+Não demoraram muito, entretanto, mal chegaram a sua sala e o telefone já tocava.// ]
+
+(text-colour:grey)[Era um senhor muito nervoso dizendo ser zelador de um prédio no centro da cidade localizado na Rua Gomes Freire, número 7 — esquina com Av. Rio Branco. 
+Ele contou que achara um dos moradores mortos. Seu nome, Amilcar Cordeiro. 
+O zelador, de nome Aguinaldo, não tinha muita coisa a relatar. Apenas que no dia anterior uma pessoa não identificada havia interfonado para o apartamento 103. 
+=><===
+<img src="https://i.pinimg.com/originals/33/fe/28/33fe28b444677949f7f8be6f40db0563.jpg" width=150%>
+==><==
+//Cena do Crime//
+
+<====>
+Timérius chegou quinze minutos depois. Número do apartamento da ocorrência: 101. O policial civil foi o primeiro a adentrar no recinto. No meio da sala, virado para a janela que dava para o fundo mal iluminado e sem janelas de um outro prédio, estava o homem mal amarrado a uma cadeira. O policial sacou a arma e examinou os outros cômodos, sem que nada lhe chamasse a atenção. 
+Finalmente se aproximou da vítima. Sua posição, cuja cabeça e parte do corpo estavam caidos para o lado direito, parecia estar forçando o centro de gravidade e prestes a se derrubar no chão com a cadeira. Depois de um breve exame, percebeu que havia um papel ensanguentado dentro do bolso de sua camisa. Ao fazer o movimento para pegá-lo, Timérius quase caiu para trás pelo tremendo susto que levou. O cadaver voltou a vida, dando um berro no pé do seu ouvido. Estava todo ensanguentado, com o nariz quebrado e o que pareciam ser queimaduras de cigarro no antebraço. 
+Ainda se recuperava do sumbido, quando se viu agarrando o homem que gritava o nome Kátia. Os quatro peritos apareceram correndo para auxiliá-lo. Dois deles colocaram-no em uma maca e o levaram para o Hospital Souza Aguiar. 
+Timérius respirou fundo, olhou para os outros dois peritos que ali ficaram e, sem dizer nenhuma palavra, continuou no exame da cena. Haviam dois tipos de pegadas no chão, mas eram desconcertantes. O que conseguiu distinguir foi que uma era de sapato social e a outra de tênis. Num exame mais minucioso, ele percebeu que as de sapato só tinham marcar de pés esquerdos e a do tênis só tinham de pés direitos. Pensou um pouco sem enxergar um motivo claro para isso.
+Olhou as estantes. Havia alguns porta-retratos e em quase todos a vítima estava com um mulher, muito parecida com ele. Silvestre presumiu ser sua irmã. Seria ela a tal Kátia?]
+=><===
+<img src="https://i.pinimg.com/originals/6e/78/04/6e78045e9b81afb946cb4451a17677de.jpg" width=150%>
+]
+
+(if: $tempo is 1)[
+(text-colour:(hsl:60,0.8039,0.5,0.5))[//Enquanto tentava juntar as pistas, um auxiliar de escritório deixou um envelope em cima da sua mesa, dizendo 'boa tarde'. O resultado do exame pisicotécnico, com pedido de consulta ao psicólogo da corporação. Ferreira riu e pensou: 'Fui chamada no RH. 
+Mas agora ela não tinha tempo pra isso. Depois pensaria no seu acidente.
+
+Estava claro que esse caso daria mais trabalho do que a detetive tinha imaginado. Por isso, registrou num caderno todas as pistas que sua equipe tinha juntado até agora.//]
+
+(button:)[[📝|Caderno de Anotações]]
+]
+
+(if: $tempo is 2)[
+(set: $anotacoes to true)
+<!--colocar nas passagens -> if: $anotacoes is true -> mostre [caderno de anotações]-->
+(button:)[[📝|Caderno de Anotações]]
+
+(button:)[[Mapa]] 
+
+]
+(if: $tempo is 3)[
+(if: $fotoCortadaJaime is true and $fotoCortadaKatia is true)[Timérius conseguiu achar as duas partes da única foto encontrada até agora onde estão Kátia e Jaime juntos. A parte da Kátia estava praticamente escondida dentro no armários guarda-roupas. A de Jaime estava exposta no melhor lugar da estante da sala. Ele mostrou para sua chefe. Ferrreira ficou pensativa por um momento. 'Que lugar era aquele onde estavam?', ele pensou alto e Timérius achou a dúvida pertinente.]
+(button:)[[📝|Caderno de Anotações]]
+
+(button:)[[Mapa]]
+]
+(if: $tempo is 4)[ (set: $caso1 to true)Você resolveu o Caso da Rua Gomes Freire!!! Vá para a próxima parte!
+(button:)[[Início|Início]]]
+==><==
+<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "101" or "apartamento")[(button:)[[101|101]]]
+(if: (lowercase: $search) contains "103" or "apartamento" or "vizinho")[(button:)[[103]]]
+(if: (lowercase: $search) contains "7" or "prédio" or "edifício")[(button:)[[Gomes Freire, número 7|Gomes Freire, número 7]]]
+(if: (lowercase: $search) contains "gomes" or "freire" or "rua")[(button:)[[Rua Gomes Freire, altura do número 7|Rua Gomes Freire]]]
+(if: (lowercase: $search) contains "zelador")[(button:)[[Zelador do prédio|Zelador]]]
+(if: (lowercase: $search) contains "papel" or "bilhete" or "bolso")[(button:)[[Papel no bolso da vítima|Papel no bolso]]]
+(if: (lowercase: $search) contains "katia" or "irmã")[(button:)[[Katia|Kátia]]]
+(if: (lowercase: $search) contains "hospital" or "souza" or "aguiar")[(button:)[[Hospital Souza Aguiar]]]
+(if: (lowercase: $search) contains "regente" or "feijó")[(button:)[[Regente Feijó|Regente Feijó]]]
+(if: (lowercase: $search) contains "constituição" )[(button:)[[Rua da Constituição|Rua da Constituição]]]
+(if: (lowercase: $search) contains "jaime" and "kátia" )[[[Antiga casa de Kátia|Antiga casa de Kátia]]]
+(if: (lowercase: $search) contains " " or false)[]
+(else:)[]]]
+
+
+
+<audio src="https://mccliaosh-fiick-skierm.yolasite.com/ws/media-library/997cb3b2644243e2a07f9d976c526157/videoplayback-_3_.mp3" autoplay loop>
+
+
+:: Caso 2 - Delegacia {"position":"2625,450","size":"100,100"}
+(if: $caso1 is false)[ (text-colour:(hsl:0,0.8039,0.5,0.75))[//Você ainda não resolveu o Primeiro Caso//]](else:)[]
+
+
+
+:: Comércio Local {"position":"650,1100","size":"100,100"}
+(if: $tempo is 1)[(set: $tempo to $tempo + 1)]
+
+(button:)[[Rua Gomes Freire]] 
+(button:)[[Prédios nas redondezas]] 
+
+<!--aqui deve-se colocar um caminho para as ruas importantes sem muita explicação. para o jogador explorar se quiser. pode-se talvez colocar um mapa dessa parte do centro da cidade-->
+
+
+:: Dono do bar na regente feijó {"position":"500,1625","size":"100,100"}
+(text-colour:grey)[//Timérius conversa com o dono do bar.//]
+(button:)[[boteco]] 
+
+<!--aqui deve-se perguntar para o dono do bar para ter acesso as residências abaixo. -->
+
+(button:)[[Casa de Junior Navalha]] 
+
+(button:)[[apartamento de Jaime]]
+
+
+
+
+:: Entrar na Parte 1 {"position":"575,450","size":"100,100"}
+==><==
+<img src="https://i.pinimg.com/originals/d4/35/06/d43506034cc0c5bd36213f6a2f769a7e.png" width=50%>
+######(text-colour:#868e96)[(checkbox-fullscreen: "Fullscreen mode")]
+(set: $hospital to 0)(set: $tempo to 0)
+(button:)[[Parte 1 - Sequestro da Rua Gomes Freire|Caso 1 - Delegacia]] 
+
+
+
+
+
+:: Entrar no Jogo [entrar] {"position":"1600,50","size":"100,100"}
+==><==
+####(text-colour:navy)+(bg:(gradient: 0, 0,#e5e619,0.5,#ffffff,1,#e5e619))[[[Entrar no Jogo|Início]] ]
+(set: $caso1 to false)(set: $caso2 to false)
+
+
+:: Gomes Freire, número 7 [tempo-1] {"position":"350,950","size":"100,100"}
+(if: $tempo is 0)[(set: $tempo to $tempo + 1)]
+=><===
+
+<img src="https://i.pinimg.com/originals/5b/a5/24/5ba524a541607a7c7094aafb907b488a.jpg" width=150%>
+
+
+<====>
+(text-colour:grey)[
+(button:)[[101]]
+
+(button:)[[103]]
+
+(button:)[[bar]]
+
+(button:)[[Voltar para a Delegacia|Caso 1 - Delegacia]] 
+
+]
+
+
+
+:: Homens bebendo {"position":"225,1200","size":"100,100"}
+Timérius se aproxima dos homens bebendo à mesa
+==><==
+#####(button:)[(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
+<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(link-rerun: "(text-colour:#999900)[^^//''RELACIONAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "foto" or "amilcar")[(set: $orlando to true)Orlando, um dos homens diz que conhece Amilcar. Mora no prédio ao lado do dele e sempre o vê por ali. [[Conversar com Orlando|Orlando]]]]]
+
+
+:: Hospital Souza Aguiar [tempo-1] {"position":"475,950","size":"100,100"}
+(if: $tempo is 0)[(set: $tempo to $tempo + 1)]
+(if: $hospital is 0)[
+Amilcar está em coma induzido. Timérius tentaria voltar mais tarde.
+#####(text-colour:#999900)[Timérius pode perguntar algo para a enfermeira]
+<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "visit" or "alguém" or "recebeu")[Alguém visitou Amilcar ]
+(if: (lowercase: $search) contains "quem" or "visit" or "saber")[ Nas câmeras do hospital, mais uma vez, Timérius viu o suspeito de boné, óculos escuro e mancando da perna esquerda.]
+]]
+
+]
+(else-if: $hospital is 1)[
+Amilcar acordou algumas vezes chamando constantemente a irmã, mas ainda não está estavel. Timérius tentaria voltar mais tarde.
+]
+(else-if: $hospital >= 2)[
+Amilcar está lúcido. Ele conta que o ex-namorado de Kátia que o secrestrou e agrediu porque ele estava impedindo que Jaime visse a sua irmã. Ele segura o braço de Timérius e diz que tem receio de Jaime ter feito algo com sua irmã. Ele não havia conseguido falar com ela há dois dias. E eles se falavam todos os dias ]
+#####(text-colour:#999900)[Timérius pode perguntar algo para Amilcar]
+<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "onde" or "mora" or "Jaime")[Ele mora na Regente Feijó. É tudo o que Amilcar sabe. ]
+(if: (lowercase: $search) contains "onde" or "kátia" or "morava")[Kátia morava na Gomes Freire, mais próxima ainda de Amilcar. [[Antiga casa de Kátia]]]
+]]
+
+==><==
+
+(button:)[[Delegacia|Caso 1 - Delegacia]] 
+
+
+:: Início {"position":"1600,200","size":"100,100"}
+==><==
+######(text-colour:#868e96)[(checkbox-fullscreen: "Fullscreen mode")]
+
+<img src="https://i.pinimg.com/originals/95/3e/f5/953ef5844d9137c02c3a49bb2d82ebdf.png" width=100%>
+==><==
+#####(text-colour:#868e96)[Criação: Lucas Estrela]
+
+<img src="https://i.pinimg.com/originals/5c/17/47/5c1747cb554f41ab6eaae1c7323c2126.jpg" width=100%>
+
+######(text-colour:#868e96)[Detetive Ferreira e companhia]
+<====>
+(if: $caso1 is false)[
+(text-colour:#868e96)[(button:)[[Sequestro da Rua Gomes Freire|Entrar na Parte 1]]] ]
+(else:)[(text-colour:grey)[//Primeira parte já foi resolvida//]]
+(if: $caso2 is false)[
+(text-colour:#868e96)[(button:)[[Caso 2 - Delegacia]]]]
+(else:)[]
+
+
+:: Kátia [tempo-1] {"position":"975,950","size":"100,100"}
+(set: $katia to true)
+(text-colour:grey)[A delegada Ferreira pesquisa nos arquivos públicos. Kátia é a irmã de Amilcar.
+Em seus registros, descobrem que ela mora também no centro da cidade, muito próximo dalí. Trabalha numa empresa de telefonia perto da rua da carioca. ]
+
+==><==
+(text-colour:#999900)[Porque será que Amilcar gritava o nome de sua irmã?]
+(text-colour:grey)[<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "empresa" or "carioca" or "telefonia" or "trabalh")[Numa consulta rápida por telefone, Ferreira descobre que ela está viajando há uma semana. Sem contato por telefone ou mensagem, está num vilarejo do interior do Rio onde o sinal de telefonia é quase inexistente. Vale a pena manda Timérius lá pessoalmente. [[trabalho da Kátia]]]
+(if: (lowercase: $search) contains "mora" or "casa" or "residência" or "apartamento" or "ir" or "procura")[Timérius teve a ideia de ir até o prédio onde Kátia reside. [[Rua da Constituição]]]
+]]]
+
+
+(button:)[(link-undo:"voltar")]
+
+
+:: Loja de música {"position":"1200,1225","size":"100,100"}
+Ninguém sabe de nada.
+(button:)[[Rua da Constituição]] 
+
+
+:: Mapa [MAPA] {"position":"1075,1650","size":"200,200"}
+==><==
+(text-colour:grey)[//Mapa da Localidade//]
+<====>
+<img src="https://i.pinimg.com/originals/b4/9c/ce/b49cce2ca2d5ab571ba6154729edc4d0.png" width=100%>
+
+(button:)[[Rua Gomes Freire]] 
+(button:)[[Regente Feijó]] 
+(button:)[[Rua da Constituição]] 
+
+
+(button:)[[Hospital Souza Aguiar]] 
+(button:)[[Delegacia de polícia|Caso 1 - Delegacia]] 
+
+
+:: Mini-Mercado {"position":"1200,1100","size":"100,100"}
+(button:)[[Rua da Constituição]] 
+
+
+:: Orlando {"position":"225,1325","size":"100,100"}
+
+==><==
+(text-colour:grey)[//Timérius conversa com Orlando, que não está muito afin de papo. Entretanto, se sente obrigado a falar quando Timérius mostra o distintivo da policia civil. //]
+
+#####(button:)[(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
+<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(link-rerun: "(text-colour:#999900)[^^//''RELACIONAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "imagem" or "câmera" or "suspeiro" or "manca" or "perna" or "esquerda")[Orlando arregala os olhos. Ele também o conhecia. Aquele é o Jaime, disse Orlando olhando para o chão. Quando olhou para o detetive sua expressão era de preocupação. Jaime era um cara problemático. Não sabia exatamente qual era o motivo, mas soube que os dois, Amilcar e Jaime, andaram discutindo no bar há algumas semanas atrás.]
+(if: (lowercase: $search) contains "junior" or "navalha" or "local" or "malandro")[
+Orlando não sabia de nada muito específico sobre o Junior Navalha, apenas que seu reduto também era ali perto na Regente Feijó, mesma rua onde mora o Jaime. (button:)[[Regente Feijó]] (set: $regenteFeijo to true)]
+]]
+
+
+
+:: Papel no bolso [tempo-1] {"position":"850,950","size":"100,100"}
+(if: $tempo is 0)[(set: $tempo to $tempo + 1)](set: $papel to true)(set: $taki to true)
+<====>
+(text-colour:grey)[Um recibo de uma loja de material de construção chamada Takí com um número de telefone escrito a lápis no verso, salpicado de sangue. A compra da nota, feita há uma semana atrás, foi de um pedaço de corda. Possivelmente a mesma corda usada no crime.
+A perícia descobriu que os números no papel ensanguentado correspondem ao número da pizzaria da qual Timérius achara o cartão no apartamento de Amilcar.]
+
+==><==
+#####(text-colour:#999900)[A Delegada tem que investigar isso...]
+<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "takí" or "material" or "construção" or "loja")[[[Takí|Takí, Material de Construção]]]
+(if: (lowercase: $search) contains "telefone" or "número" or "verso" or "pizzaria")[[[Pizzaria|pizzaria]]]
+]]
+
+
+#####(button:)[(link-undo:"voltar")]
+
+
+:: Passagem Sem Nome {"position":"100,0","size":"100,100"}
+
+
+
+:: Prédios nas redondezas {"position":"525,1100","size":"100,100"}
+(button:)[[Rua Gomes Freire]] 
+
+(button:)[[Comércio Local]] 
+
+
+
+
+:: Regente Feijó [tempo-2] {"position":"500,1300","size":"100,100"}
+(if: $tempo is 1)[(set: $tempo to $tempo + 1)]
+==><==
+(text-colour:grey)[//Rua Regente Feijó//
+Timérius teria que perguntar por ai para continuar a investigação.
+
+(button:)[[sebo]]
+
+(button:)[[boteco]]
+
+(button:)[[loja de eletrônicos]]]
+
+
+
+
+
+(button:)[[Caso 1 - Delegacia]] 
+
+
+
+:: Rua Gomes Freire [tempo-2] {"position":"600,950","size":"100,100"}
+(if: $tempo is 1)[(set: $tempo to $tempo + 1)]
+
+<!--aqui tem q ser colocado vários estabelecimentos e no meio as moradas de kátia e jaime para serem achadas por dedução a partir das pistas. Alguns prédios de apartamentos e algumas lojas para Timérius investigar e fazer perguntas-->
+Timérius anda pela Rua Gomes Freire. O que procurar? Ele pensa.
+(if: $cameraBar is true or $cameraTaki is True)[
+Timérius tem em mãos as imagens do suspeito e da vítima para mostrar. Em uma rápida olhada pela rua, viu uma loja de roupas, uma loja de música, um outro bar, uma pastelaria, um pequeno restaurante. Havia também alguns prédios residenciais e comerciais. Por onde Timérius começaria sua busca?]
+
+
+(button:)[[Comércio Local]]
+(button:)[[Prédios nas redondezas]]
+
+(button:)[[Delegacia|Caso 1 - Delegacia]] 
+
+
+
+
+:: Rua da Constituição [tempo-1] {"position":"1075,1100","size":"100,100"}
+(if: $tempo is 0)[(set: $tempo to $tempo + 1)](set: $hospital to $hospital +1)
+<====>
+(text-colour:grey)[Timérius chega no prédio em que Kátia morava. Fica na Rua da Constituição muito próximo ao prédio de Amilcar, na Gomes Freire. 
+(button:)[[Bar ao lado]]
+(button:)[[Loja de música]]
+(button:)[[Mini-Mercado]]
+(button:)[[Caso 1 - Delegacia]] 
+]
+
+
+==><==
+(text-colour:#999900)[O que timérius vai perguntar para o zelador do prédio de Kátia?]
+(text-colour:grey)[<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "quando" or "viaj" or "férias" or "saiu")[Ela viajou a quase um mês atrás ]
+(if: (lowercase: $search) contains "alguém" or "visit" or "frequent")[O irmão dela vem aqui com frequência. Há uns meses atrás ela namorou um cara, mas eles brigaram.]
+(if: (lowercase: $search) contains "quem" or "namorad" or "companheir" or "frequent" or "companhia")[Há uns meses atrás ela namorava um cara, mas eles brigaram.]
+(if: (lowercase: $search) contains "como" or "é" or "era" or "ex" or "namorad")[Ele era loiro, baixo e tinha um problema na perna. Não lembro o nome dele, disse o zelador.]
+(if: (lowercase: $search) contains "chave" or "abr" or "apartamento" or "porta")[Timérius pede que o zelador abra a porta do [[apartamento de Kátia]]]
+(if: (lowercase: $search) contains " " or false)[]
+]]]
+
+
+:: Takí, Material de Construção {"position":"925,1100","size":"100,100"}
+<====>
+(set: $taki to true)
+(text-colour:grey)[Ao questionar o dono da loja Takí, ele reconheceu Amilcar na foto que o investigador lhe mostrou. A compra da nota, feita há uma semana atrás, foi de um pedaço de corda. Possivelmente a mesma corda usada no crime.]
+==><==
+#####(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
+<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(button:)[(link-rerun: "(text-colour:#999900)[^^//''RELACIONAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "camera" or "vigilancia" or "alguem" or "acompanh" or "quant" or "pessoa")[(set: $cameraTaki to true)Timérius pergunta se havia alguém acompanhando Amilcar quando ele veio comprar o pedaço de corda. O atendente disse que sim. A câmera do estabelecimento gravou quando Amilcar, visivelmente nervoso, entrou e alguém ficou esperando do lado de fora. Não era possível ver o seu rosto, mas foi possível intentificar o andar peculiar do criminoso, mancando da perna esquerda. O atendendte da loja também disse que o suspeito acompanhando Amilcar era loiro.]]]
+
+(button:)[[Caso 1 - Delegacia]] 
+
+
+:: Voz Alta {"position":"375,1625","size":"100,100"}
+<!--Timérius deve perguntar, mas só vão conhecer o Navalha-->
+(button:)[[Casa de Junior Navalha]]
+[[boteco]] 
+
+
+:: Zelador {"position":"350,675","size":"100,100"}
+O zelador só sabe o que contou para os policiais.
+
+(button:)[(link-undo:"voltar")]
+
+
+:: algum cliente {"position":"225,1500","size":"100,100"}
+<!--Ninguém vai responder nada satisfatório-->
+(button:)[[boteco]] 
+
+
+:: apartamento de Jaime [tempo-2] {"position":"500,1500","size":"100,100"}
+(if: $tempo is 1)[(set: $tempo to $tempo + 1)]
+==><==
+(text-colour:grey)[//A Casa de Jaime//]
+(text-colour:#999900)[Timérius pode investigar qualquer parte da casa.]
+(text-colour:grey)[<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "banheiro")[Não há nada]
+(if: (lowercase: $search) contains "quarto")[Não há nada]
+(if: (lowercase: $search) contains "sala")[(set: $tempo to 3)(set: $fotoCortadaJaime to true)(if: $fotoCortadaKatia is true)[Na estante da sala, Timérius acha uma foto cortada no meio. Nela, está Jaime feliz e sorridente, abraçado com alguém que não pode ser identificado. Timérius tinha plena certza de que era Kátia na outra parte da foto.](else:)[Na estante da sala, Timérius acha uma foto cortada no meio. Nela, está Jaime feliz e sorridente, abraçado com alguém que não pode ser identificado. Ficou na outra parte da foto. Porém, é possível ver que ele está numa varanda para alguma rua que Timérius reconhecia, mas não sabia dizer qual. Timérius tinha quase certeza que era por ali perto.] ]
+(if: (lowercase: $search) contains "serviço" or "área")[Não há nada]
+(if: (lowercase: $search) contains "cozinha")[Não há nada]
+]]
+]
+(button:)[[Regente Feijó]] 
+
+
+:: apartamento de Kátia [tempo-2] {"position":"1200,975","size":"100,100"}
+(if: $tempo is 1)[(set: $tempo to $tempo + 1)](set: $apartamentoKatia to true)
+<====>
+Ao abrir a porta do apartamento de Kátia, Timérius e o zelador do prédio sentiram um cheiro forte vindo de lá dentro. Os dois se entreolharam. Devagar, Timérius adentrou o recinto. Algumas coisas já chamaram sua atenção. Roupas jogadas num canto numa casa de mulher. Algo incomum. "Kátia!", chamou o detetive. Apenas silêncio. Parecia que o cheiro vinha da cozinha. Alguns sacos de lixo em um dos cantos do cômodo revelaram a origem do cheiro desagradável. Restos de comida que pareciam ter mais de uma semana. Definitivamente, Timérius sentia que algo estava errado ali, mas não podia bater o martelo em relação a isso. Kátia poderia ter saido as pressas pelo simples motivo de estar atrasada para a viagem. Por isso, esqueceu de jogar o lixo fora e de colocar as roupas sujas no cesto. 
+
+
+==><==
+(text-colour:#999900)[Timérius poderia olhar as estantes, os outros cômodos ou olhar melhor a cozinha.]
+(text-colour:grey)[<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "estantes")[Nada de importante nas estantes da Sala]
+(if: (lowercase: $search) contains "banheiro")[Nada de importante no banheiro]
+(if: (lowercase: $search) contains "quarto")[[[armário do quarto|armário do quarto]]]
+(if: (lowercase: $search) contains "sala")[Nada de importante na sala]
+(if: (lowercase: $search) contains "serviço" or "área")[]
+(if: (lowercase: $search) contains "cozinha")[Em cima da mesa da cozinha, Timérius encontrou um pequeno caderno de anotações que continha alguns telefones. Achou prudente levar.]
+]]
+]
+(button:)[[Rua da Constituição]] 
+(button:)[[Delegacia|Caso 1 - Delegacia]] 
+
+
+:: armário do quarto {"position":"1325,1100","size":"100,100"}
+(set: $tempo to 3)(set: $fotoCortadaKatia to true)(if: $fotoCortadaJaime is true)[No armário do quarto, Timérius acha uma foto cortada. O estranho é que ela estava dentro de uma gaveta de meias. Na imagem estava Kátia feliz e sorridente, abraçada com alguém que ficou incógnita na outra parte da foto que foi cortada. Timérius tinha certeza de que Jaime na outra parte.](else:)[No armário do quarto, Timérius acha uma foto cortada. O estranho é que ela estava dentro de uma gaveta de meias. Na imagem estava Kátia feliz e sorridente, abraçada com alguém que ficou incógnita na outra parte da foto que foi cortada.]
+(button:)[(link-undo:"Voltar")]
+
+
+:: bar {"position":"225,1075","size":"100,100"}
+(text-colour:grey)[Do outro lado da rua, em frente ao prédio, há um bar. Timérius, como a foto de Amilcar em mãos, se aproxima do dono do bar para conversar. ](set: $hospital to $hospital +1)(set: $bar to true)
+
+(button:)[[Gomes Freire, número 7]] 
+(button:)[[Caso 1 - Delegacia]] 
+
+==><==
+#####(button:)[(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
+<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(link-rerun: "(text-colour:#999900)[^^//''RELACIONAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains"câmera" or "vigilância")[(set: $cameraBar to true)Pelas câmeras do bar eles conseguiram ver o suspeito. Havia apenas uma característica peculiar: ele mancava da perna esquerda.]
+(if: (lowercase: $search) contains "viu" or "alguém" or "noite" or "anterior" or "interfon")[(set: $cameraBar to true)Timérius questiona o dona se alguém interfonou na noite anterior. A resposta foi sim. Pelas câmeras do bar eles conseguiram ver o suspeito. Mancava da perna esquerda.]
+(text-colour:yellow)[(if: $cameraBar is true)[Quatro homens bebendo e conversando estão sentados em uma das mesas. Timérius pode puxar conversa com os homens na mesa [[Homens bebendo]]] ]
+(if: (lowercase: $search) contains "conhec" or "sabe" or "frequent")[ O dono do bar diz o indivíduo não lhe parece estranho. Talvez morasse pelas redondezas. ]
+
+]]
+
+<!--colocar busca aqui tb. tirar esse texto e colocar o link pra descobrir se tem câmera, se alguem do prédio vem ao bar e tal.-->
+
+
+:: boteco {"position":"375,1500","size":"100,100"}
+No boteco, Timérius pode perguntar qualquer coisa.
+Perguntar em voz alta (button:)[[Voz Alta]]
+Falar com o dono do bar (button:)[[Dono do bar na regente feijó]]
+Escolher algum cliente (button:)[[algum cliente]]
+
+
+:: loja de eletrônicos {"position":"775,1500","size":"100,100"}
+[[Regente Feijó]] 
+Ninguém sabe de nada
+
+
+:: pizzaria {"position":"800,1100","size":"100,100"}
+<====>
+(set: $pizzaria to true)
+(text-colour:grey)[Conversando com o dono local chamado Fábio, descobre que Amilcar trabalhava na pizzaria até algumas semanas atrás. Ele foi demitido por causa de uma briga não esclarecida dentro do estabelecimento. Algo sobre uma dívida que vieram cobrar a ele. Ele negou tudo na época, mas os donos preferiram demiti-lo. O cara que veio cobrar-lhe a dívida foi um malandro local, conhecido como Junior Navalha. Na pizzaria haviam três funcionários que poderia interrogar. O cozinheiro chamado Júlio e os dois garsons, Natan e Fred. ]
+
+
+==><==
+#####(button:)[(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
+<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(link-rerun: "(text-colour:#999900)[^^//''RELACIONAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "fred" or "garçon" or "garçons")[]
+(if: (lowercase: $search) contains "natan" or "garçon" or "garçons")[]
+(if: (lowercase: $search) contains "júlio" or "cozinheiro" or "cozinha")[]
+(if: (lowercase: $search) contains "jaime")[]
+(if: (lowercase: $search) contains "kátia")[]
+(if: (lowercase: $search) contains "navalha")[]
+]]
+
+(button:)[[Caso 1 - Delegacia]] 
+
+
+:: sebo {"position":"650,1500","size":"100,100"}
+[[Regente Feijó]] 
+Ninguém sabe de nada. Mas já viram a Kátia por ali.
+
+
+:: trabalho da Kátia {"position":"1200,850","size":"100,100"}
+(text-colour:grey)[//Ferreira liga para o RH da empresa em que Kátia trabalha. O que vai perguntar?//
+]
+==><==
+#####(text-colour:#999900)[A Delegada tem que investigar isso...]
+<!--descrever o local de trabalho de Kátia-->
+<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
+####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
+(set: $search to (prompt: [Investigar...], "-", "",))
+(if: (lowercase: $search) contains "férias")[Kátia está de férias a três semanas. Há uma semana atrás ela mandou uma mensagem para sua chefe dizendo que faria uma viagem rápida de uma semana antes do fim das férias, mas para ficarem despreocupados no trabalho pois ela voltaria na data esperada. Portanto, ainda faltava uma semana para o fim das férias de Kátia. Teoricamente, ela estava dentro do prazo que estabeleceu. Mas o que a chefe de Kátia relatou é que não parecia comum ela avisar isso. Geralmente, os funcionários só voltam a fazer contato nos últimos dias de férias, confirmando sua volta e apenas isso. Não costumam se comunicar no meio dos dias de descanso para dizer que vai viajar. Não fazia muito sentido. Timérius anotou isso. ]
+(if: (lowercase: $search) contains " " or false)[]
+]]
+
+
+:: StoryScript [script]
+var audio = document.createElement("audio");
+audio.src = "https://mccliaosh-fiick-skierm.yolasite.com/ws/media-library/f576455fa24b42fb8f8a8d65a1cc763d/videoplayback-3.m4a";
+audio.loop = true;
+audio.play();
+
+:: StoryStylesheet [stylesheet]
+tw-text {border: opacity 0.1;}
+
+[tags="entrar"] { background-image:url(https://i.pinimg.com/originals/82/b8/28/82b828b4796a8a49f1869e16de13349c.png);   
+  background-size:100%;   background-repeat: no-repeat;   }
