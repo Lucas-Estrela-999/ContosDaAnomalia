@@ -1,69 +1,190 @@
-:: StoryTitle
-Contos da Anomalia 1.0
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Contos da Anomalia 1.0</title>
+<style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 50%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0.25) 0%, hsla(14deg, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14deg, 100%, 87%, 0) 0%, hsla(14deg, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
+</style>
+</head>
+<body>
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Contos da Anomalia 1.0.</tw-noscript></noscript></tw-story>
+<tw-storydata name="Contos da Anomalia 1.0" startnode="14" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="E5975B25-8FD1-4414-AC8A-F59B0D239951" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-text {border: opacity 0.1;}
 
-
-:: StoryData
-{
-  "ifid": "E5975B25-8FD1-4414-AC8A-F59B0D239951",
-  "format": "Harlowe",
-  "format-version": "3.3.8",
-  "start": "Entrar no Jogo",
-  "tag-colors": {
-    "tempo-1": "yellow",
-    "tempo-2": "orange",
-    "MAPA": "blue"
-  },
-  "zoom": 0.6
-}
-
-
-:: 101 {"position":"225,825","size":"100,100"}
-(if: $tempo is 0)[(set: $tempo to $tempo + 1)](set: $aptm101 to true)
+[tags="entrar"] { background-image:url(https://i.pinimg.com/originals/82/b8/28/82b828b4796a8a49f1869e16de13349c.png);   
+  background-size:100%;   background-repeat: no-repeat;   }
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">var audio = document.createElement("audio");
+audio.src = "https://mccliaosh-fiick-skierm.yolasite.com/ws/media-library/f576455fa24b42fb8f8a8d65a1cc763d/videoplayback-3.m4a";
+audio.loop = true;
+audio.play();</script><tw-tag name="tempo-1" color="yellow"></tw-tag><tw-tag name="tempo-2" color="orange"></tw-tag><tw-tag name="MAPA" color="blue"></tw-tag><tw-passagedata pid="1" name="101" tags="" position="225,825" size="100,100">(if: $tempo is 0)[(set: $tempo to $tempo + 1)](set: $aptm101 to true)
 (text-colour:grey)[Timérius acha um cartão de uma pizzaria perto dali. Em um papel em uma das gavetas da estante da sala, acha o que poderia ser o número de telefone de Kátia. 
 (button:)[[Gomes Freire, número 7]]
-(button:)[(link-undo:"voltar")]
+(button:)[(link-undo:&quot;voltar&quot;)]
+]</tw-passagedata><tw-passagedata pid="2" name="Gomes Freire, número 7" tags="tempo-1" position="350,950" size="100,100">(if: $tempo is 0)[(set: $tempo to $tempo + 1)]
+=&gt;&lt;===
+
+&lt;img src=&quot;https://i.pinimg.com/originals/5b/a5/24/5ba524a541607a7c7094aafb907b488a.jpg&quot; width=150%&gt;
+
+
+&lt;====&gt;
+(text-colour:grey)[
+(button:)[[101]]
+
+(button:)[[103]]
+
+(button:)[[bar]]
+
+(button:)[[Voltar para a Delegacia|Caso 1 - Delegacia]] 
+
 ]
+</tw-passagedata><tw-passagedata pid="3" name="Rua Gomes Freire" tags="tempo-2" position="600,950" size="100,100">(if: $tempo is 1)[(set: $tempo to $tempo + 1)]
+
+&lt;!--aqui tem q ser colocado vários estabelecimentos e no meio as moradas de kátia e jaime para serem achadas por dedução a partir das pistas. Alguns prédios de apartamentos e algumas lojas para Timérius investigar e fazer perguntas--&gt;
+Timérius anda pela Rua Gomes Freire. O que procurar? Ele pensa.
+(if: $cameraBar is true or $cameraTaki is True)[
+Timérius tem em mãos as imagens do suspeito e da vítima para mostrar. Em uma rápida olhada pela rua, viu uma loja de roupas, uma loja de música, um outro bar, uma pastelaria, um pequeno restaurante. Havia também alguns prédios residenciais e comerciais. Por onde Timérius começaria sua busca?]
 
 
-:: 103 {"position":"225,950","size":"100,100"}
-(if: $tempo is 0)[(set: $tempo to $tempo + 1)](set: $aptm103 to true)
+(button:)[[Comércio Local]]
+(button:)[[Prédios nas redondezas]]
+
+(button:)[[Delegacia|Caso 1 - Delegacia]] 
+
+</tw-passagedata><tw-passagedata pid="4" name="Zelador" tags="" position="350,675" size="100,100">O zelador só sabe o que contou para os policiais.
+
+(button:)[(link-undo:&quot;voltar&quot;)]</tw-passagedata><tw-passagedata pid="5" name="Papel no bolso" tags="tempo-1" position="850,950" size="100,100">(if: $tempo is 0)[(set: $tempo to $tempo + 1)](set: $papel to true)(set: $taki to true)
+&lt;====&gt;
+(text-colour:grey)[Um recibo de uma loja de material de construção chamada Takí com um número de telefone escrito a lápis no verso, salpicado de sangue. A compra da nota, feita há uma semana atrás, foi de um pedaço de corda. Possivelmente a mesma corda usada no crime.
+A perícia descobriu que os números no papel ensanguentado correspondem ao número da pizzaria da qual Timérius achara o cartão no apartamento de Amilcar.]
+
+==&gt;&lt;==
+#####(text-colour:#999900)[A Delegada tem que investigar isso...]
+&lt;img src=&quot;https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png&quot; width=40%&gt;
+####(button:)[(link-rerun: &quot;(text-colour:#999900)[^^//&#39;&#39;INVESTIGAR&#39;&#39;//^^//&#39;&#39;AS PISTAS&#39;&#39;//]&quot;)[
+(set: $search to (prompt: [Investigar...], &quot;-&quot;, &quot;&quot;,))
+(if: (lowercase: $search) contains &quot;takí&quot; or &quot;material&quot; or &quot;construção&quot; or &quot;loja&quot;)[[[Takí|Takí, Material de Construção]]]
+(if: (lowercase: $search) contains &quot;telefone&quot; or &quot;número&quot; or &quot;verso&quot; or &quot;pizzaria&quot;)[[[Pizzaria|pizzaria]]]
+]]
+
+
+#####(button:)[(link-undo:&quot;voltar&quot;)]</tw-passagedata><tw-passagedata pid="6" name="Kátia" tags="tempo-1" position="975,950" size="100,100">(set: $katia to true)
+(text-colour:grey)[A delegada Ferreira pesquisa nos arquivos públicos. Kátia é a irmã de Amilcar.
+Em seus registros, descobrem que ela mora também no centro da cidade, muito próximo dalí. Trabalha numa empresa de telefonia perto da rua da carioca. ]
+
+==&gt;&lt;==
+(text-colour:#999900)[Porque será que Amilcar gritava o nome de sua irmã?]
+(text-colour:grey)[&lt;img src=&quot;https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png&quot; width=40%&gt;
+####(button:)[(link-rerun: &quot;(text-colour:#999900)[^^//&#39;&#39;INVESTIGAR&#39;&#39;//^^//&#39;&#39;AS PISTAS&#39;&#39;//]&quot;)[
+(set: $search to (prompt: [Investigar...], &quot;-&quot;, &quot;&quot;,))
+(if: (lowercase: $search) contains &quot;empresa&quot; or &quot;carioca&quot; or &quot;telefonia&quot; or &quot;trabalh&quot;)[Numa consulta rápida por telefone, Ferreira descobre que ela está viajando há uma semana. Sem contato por telefone ou mensagem, está num vilarejo do interior do Rio onde o sinal de telefonia é quase inexistente. Vale a pena manda Timérius lá pessoalmente. [[trabalho da Kátia]]]
+(if: (lowercase: $search) contains &quot;mora&quot; or &quot;casa&quot; or &quot;residência&quot; or &quot;apartamento&quot; or &quot;ir&quot; or &quot;procura&quot;)[Timérius teve a ideia de ir até o prédio onde Kátia reside. [[Rua da Constituição]]]
+]]]
+
+
+(button:)[(link-undo:&quot;voltar&quot;)]</tw-passagedata><tw-passagedata pid="7" name="Início" tags="" position="1600,200" size="100,100">==&gt;&lt;==
+######(text-colour:#868e96)[(checkbox-fullscreen: &quot;Fullscreen mode&quot;)]
+
+&lt;img src=&quot;https://i.pinimg.com/originals/95/3e/f5/953ef5844d9137c02c3a49bb2d82ebdf.png&quot; width=100%&gt;
+==&gt;&lt;==
+#####(text-colour:#868e96)[Criação: Lucas Estrela]
+
+&lt;img src=&quot;https://i.pinimg.com/originals/5c/17/47/5c1747cb554f41ab6eaae1c7323c2126.jpg&quot; width=100%&gt;
+
+######(text-colour:#868e96)[Detetive Ferreira e companhia]
+&lt;====&gt;
+(if: $caso1 is false)[
+(text-colour:#868e96)[(button:)[[Sequestro da Rua Gomes Freire|Entrar na Parte 1]]] ]
+(else:)[(text-colour:grey)[//Primeira parte já foi resolvida//]]
+(if: $caso2 is false)[
+(text-colour:#868e96)[(button:)[[Caso 2 - Delegacia]]]]
+(else:)[]</tw-passagedata><tw-passagedata pid="8" name="Hospital Souza Aguiar" tags="tempo-1" position="475,950" size="100,100">(if: $tempo is 0)[(set: $tempo to $tempo + 1)]
+(if: $hospital is 0)[
+Amilcar está em coma induzido. Timérius tentaria voltar mais tarde.
+#####(text-colour:#999900)[Timérius pode perguntar algo para a enfermeira]
+&lt;img src=&quot;https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png&quot; width=40%&gt;
+####(button:)[(link-rerun: &quot;(text-colour:#999900)[^^//&#39;&#39;INVESTIGAR&#39;&#39;//^^//&#39;&#39;AS PISTAS&#39;&#39;//]&quot;)[
+(set: $search to (prompt: [Investigar...], &quot;-&quot;, &quot;&quot;,))
+(if: (lowercase: $search) contains &quot;visit&quot; or &quot;alguém&quot; or &quot;recebeu&quot;)[Alguém visitou Amilcar ]
+(if: (lowercase: $search) contains &quot;quem&quot; or &quot;visit&quot; or &quot;saber&quot;)[ Nas câmeras do hospital, mais uma vez, Timérius viu o suspeito de boné, óculos escuro e mancando da perna esquerda.]
+]]
+
+]
+(else-if: $hospital is 1)[
+Amilcar acordou algumas vezes chamando constantemente a irmã, mas ainda não está estavel. Timérius tentaria voltar mais tarde.
+]
+(else-if: $hospital &gt;= 2)[
+Amilcar está lúcido. Ele conta que o ex-namorado de Kátia que o secrestrou e agrediu porque ele estava impedindo que Jaime visse a sua irmã. Ele segura o braço de Timérius e diz que tem receio de Jaime ter feito algo com sua irmã. Ele não havia conseguido falar com ela há dois dias. E eles se falavam todos os dias ]
+#####(text-colour:#999900)[Timérius pode perguntar algo para Amilcar]
+&lt;img src=&quot;https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png&quot; width=40%&gt;
+####(button:)[(link-rerun: &quot;(text-colour:#999900)[^^//&#39;&#39;INVESTIGAR&#39;&#39;//^^//&#39;&#39;AS PISTAS&#39;&#39;//]&quot;)[
+(set: $search to (prompt: [Investigar...], &quot;-&quot;, &quot;&quot;,))
+(if: (lowercase: $search) contains &quot;onde&quot; or &quot;mora&quot; or &quot;Jaime&quot;)[Ele mora na Regente Feijó. É tudo o que Amilcar sabe. ]
+(if: (lowercase: $search) contains &quot;onde&quot; or &quot;kátia&quot; or &quot;morava&quot;)[Kátia morava na Gomes Freire, mais próxima ainda de Amilcar. [[Antiga casa de Kátia]]]
+]]
+
+==&gt;&lt;==
+
+(button:)[[Delegacia|Caso 1 - Delegacia]] </tw-passagedata><tw-passagedata pid="9" name="103" tags="" position="225,950" size="100,100">(if: $tempo is 0)[(set: $tempo to $tempo + 1)](set: $aptm103 to true)
 (text-colour:grey)[Ferreira manda Timérius de novo ao prédio, mas agora para falar com o vizinho do 103.
 Ele diz que uma pessoa tocou o interfone dizendo que era parente do morador do 101, mas que ele não estava atendendo.
 
 (button:)[[101]]
 (button:)[[Gomes Freire, número 7]] 
-(button:)[(link-undo:"voltar")]
-]
+(button:)[(link-undo:&quot;voltar&quot;)]
+]</tw-passagedata><tw-passagedata pid="10" name="bar" tags="" position="225,1075" size="100,100">(text-colour:grey)[Do outro lado da rua, em frente ao prédio, há um bar. Timérius, como a foto de Amilcar em mãos, se aproxima do dono do bar para conversar. ](set: $hospital to $hospital +1)(set: $bar to true)
 
-
-:: Antiga casa de Kátia {"position":"400,1175","size":"100,100"}
-(set: $tempo to 4)
-<====>
-A polícia cerca o prédio, mas ainda não sabem se estão no lugar certo. Timérius e quatro policiais entram no prédio e sobem as escadas até o segundo andar, onde fica o antigo apartamento onde Kátia morava quando namorou com Jaime. O apartamento havia sido vendido recentemente e descobriu-se logo na entrada que o fora comprado por Jaime. Pois dentro do escaninho do apartamento tinha uma conta endereçada ao próprio. A cabeça de Timérius não parava de pensar. O sentimento doentio de Jaime o fez comprar a casa onde tinha convivido com Kátia. E agora lá dentro com a ela à força. Mais o marginal não ofereceu resistência. Kátia estava bem, embora assustada. Foi levada direto para o Hospital, onde poderia receber cuidados médicos e ver o seu querido irmão.
-
-Caso Resolvido.
+(button:)[[Gomes Freire, número 7]] 
 (button:)[[Caso 1 - Delegacia]] 
 
+==&gt;&lt;==
+#####(button:)[(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
+&lt;img src=&quot;https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png&quot; width=40%&gt;
+####(link-rerun: &quot;(text-colour:#999900)[^^//&#39;&#39;RELACIONAR&#39;&#39;//^^//&#39;&#39;AS PISTAS&#39;&#39;//]&quot;)[
+(set: $search to (prompt: [Investigar...], &quot;-&quot;, &quot;&quot;,))
+(if: (lowercase: $search) contains&quot;câmera&quot; or &quot;vigilância&quot;)[(set: $cameraBar to true)Pelas câmeras do bar eles conseguiram ver o suspeito. Havia apenas uma característica peculiar: ele mancava da perna esquerda.]
+(if: (lowercase: $search) contains &quot;viu&quot; or &quot;alguém&quot; or &quot;noite&quot; or &quot;anterior&quot; or &quot;interfon&quot;)[(set: $cameraBar to true)Timérius questiona o dona se alguém interfonou na noite anterior. A resposta foi sim. Pelas câmeras do bar eles conseguiram ver o suspeito. Mancava da perna esquerda.]
+(text-colour:yellow)[(if: $cameraBar is true)[Quatro homens bebendo e conversando estão sentados em uma das mesas. Timérius pode puxar conversa com os homens na mesa [[Homens bebendo]]] ]
+(if: (lowercase: $search) contains &quot;conhec&quot; or &quot;sabe&quot; or &quot;frequent&quot;)[ O dono do bar diz o indivíduo não lhe parece estranho. Talvez morasse pelas redondezas. ]
 
-:: Bar ao lado {"position":"1075,1225","size":"100,100"}
-Ninguém sabe de nada.
+]]
+
+&lt;!--colocar busca aqui tb. tirar esse texto e colocar o link pra descobrir se tem câmera, se alguem do prédio vem ao bar e tal.--&gt;</tw-passagedata><tw-passagedata pid="11" name="pizzaria" tags="" position="800,1100" size="100,100">&lt;====&gt;
+(set: $pizzaria to true)
+(text-colour:grey)[Conversando com o dono local chamado Fábio, descobre que Amilcar trabalhava na pizzaria até algumas semanas atrás. Ele foi demitido por causa de uma briga não esclarecida dentro do estabelecimento. Algo sobre uma dívida que vieram cobrar a ele. Ele negou tudo na época, mas os donos preferiram demiti-lo. O cara que veio cobrar-lhe a dívida foi um malandro local, conhecido como Junior Navalha. Na pizzaria haviam três funcionários que poderia interrogar. O cozinheiro chamado Júlio e os dois garsons, Natan e Fred. ]
+
+
+==&gt;&lt;==
+#####(button:)[(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
+&lt;img src=&quot;https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png&quot; width=40%&gt;
+####(link-rerun: &quot;(text-colour:#999900)[^^//&#39;&#39;RELACIONAR&#39;&#39;//^^//&#39;&#39;AS PISTAS&#39;&#39;//]&quot;)[
+(set: $search to (prompt: [Investigar...], &quot;-&quot;, &quot;&quot;,))
+(if: (lowercase: $search) contains &quot;fred&quot; or &quot;garçon&quot; or &quot;garçons&quot;)[]
+(if: (lowercase: $search) contains &quot;natan&quot; or &quot;garçon&quot; or &quot;garçons&quot;)[]
+(if: (lowercase: $search) contains &quot;júlio&quot; or &quot;cozinheiro&quot; or &quot;cozinha&quot;)[]
+(if: (lowercase: $search) contains &quot;jaime&quot;)[]
+(if: (lowercase: $search) contains &quot;kátia&quot;)[]
+(if: (lowercase: $search) contains &quot;navalha&quot;)[]
+]]
+
+(button:)[[Caso 1 - Delegacia]] </tw-passagedata><tw-passagedata pid="12" name="Takí, Material de Construção" tags="" position="925,1100" size="100,100">&lt;====&gt;
+(set: $taki to true)
+(text-colour:grey)[Ao questionar o dono da loja Takí, ele reconheceu Amilcar na foto que o investigador lhe mostrou. A compra da nota, feita há uma semana atrás, foi de um pedaço de corda. Possivelmente a mesma corda usada no crime.]
+==&gt;&lt;==
+#####(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
+&lt;img src=&quot;https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png&quot; width=40%&gt;
+####(button:)[(link-rerun: &quot;(text-colour:#999900)[^^//&#39;&#39;RELACIONAR&#39;&#39;//^^//&#39;&#39;AS PISTAS&#39;&#39;//]&quot;)[
+(set: $search to (prompt: [Investigar...], &quot;-&quot;, &quot;&quot;,))
+(if: (lowercase: $search) contains &quot;camera&quot; or &quot;vigilancia&quot; or &quot;alguem&quot; or &quot;acompanh&quot; or &quot;quant&quot; or &quot;pessoa&quot;)[(set: $cameraTaki to true)Timérius pergunta se havia alguém acompanhando Amilcar quando ele veio comprar o pedaço de corda. O atendente disse que sim. A câmera do estabelecimento gravou quando Amilcar, visivelmente nervoso, entrou e alguém ficou esperando do lado de fora. Não era possível ver o seu rosto, mas foi possível intentificar o andar peculiar do criminoso, mancando da perna esquerda. O atendendte da loja também disse que o suspeito acompanhando Amilcar era loiro.]]]
+
+(button:)[[Caso 1 - Delegacia]] </tw-passagedata><tw-passagedata pid="13" name="Caderno de Anotações" tags="" position="850,725" size="100,100">==&gt;&lt;==
+&lt;img src=&quot;https://i.pinimg.com/originals/d4/35/06/d43506034cc0c5bd36213f6a2f769a7e.png&quot; width=&quot;100&quot;&gt;
 
 
 
 
-(button:)[[Rua da Constituição]] 
 
-
-:: Caderno de Anotações {"position":"850,725","size":"100,100"}
-==><==
-<img src="https://i.pinimg.com/originals/d4/35/06/d43506034cc0c5bd36213f6a2f769a7e.png" width="100">
-
-
-
-
-
-####Anotações: <!--crie variáveis para cada pista e coloque como item aqui nas anotações-->
-<====>
+####Anotações: &lt;!--crie variáveis para cada pista e coloque como item aqui nas anotações--&gt;
+&lt;====&gt;
 {(text-colour:(hsl:60,0.8039,0.5,0.5))[(if: $aptm101 is true)[→ Timérius acha um cartão de uma pizzaria perto dali. Em um papel em uma das gavetas da estante da sala, acha o que poderia ser o número de telefone de Kátia.  ]
 (if: $aptm103 is true)[→ O vizinho do 103 diz que uma pessoa tocou o interfone dizendo que era parente do morador do 101, mas que ele não estava atendendo.  
 ]
@@ -84,16 +205,16 @@ A perícia descobriu que os números no papel ensanguentado correspondem ao núm
 
 
 ---
-==><==
-(text-style:"fade-in-out")[(button:)[(text-colour:gray)[Resumo do caso:]]]
-<====>
-(click: "Resumo do caso:")[
+==&gt;&lt;==
+(text-style:&quot;fade-in-out&quot;)[(button:)[(text-colour:gray)[Resumo do caso:]]]
+&lt;====&gt;
+(click: &quot;Resumo do caso:&quot;)[
 (text-colour:grey)[Um homem ligou para a polícia dizendo ser zelador de um prédio no centro da cidade localizado na Rua Gomes Freire, número 7 — esquina com Av. Rio Branco. 
 Ele contou que achara um dos moradores mortos. Seu nome, Amilcar Cordeiro. 
 O zelador, de nome Aguinaldo, não tinha muita coisa a relatar. Apenas que no dia anterior uma pessoa havia interfonado para o apartamento 103. 
-=><===
-<img src="https://i.pinimg.com/originals/33/fe/28/33fe28b444677949f7f8be6f40db0563.jpg" width=150%>
-<====>
+=&gt;&lt;===
+&lt;img src=&quot;https://i.pinimg.com/originals/33/fe/28/33fe28b444677949f7f8be6f40db0563.jpg&quot; width=150%&gt;
+&lt;====&gt;
 Timérius chegou quinze minutos depois. Número do apartamento da ocorrência: 101. O policial civil foi o primeiro a adentrar no recinto. No meio da sala, virado para a janela que dava para o fundo mal iluminado e sem janelas de um outro prédio, estava o homem mal amarrado a uma cadeira. O policial sacou a arma e examinou os outros cômodos, sem que nada lhe chamasse a atenção. 
 Finalmente se aproximou da vítima. Sua posição, cuja cabeça e parte do corpo estavam caidos para o lado direito, parecia estar forçando o centro de gravidade e prestes a se derrubar no chão com a cadeira. Depois de um breve exame, percebeu que havia um papel ensanguentado dentro do bolso de sua camisa. Ao fazer o movimento para pegá-lo, Timérius quase caiu para trás pelo tremendo susto que levou. O cadaver voltou a vida, dando um berro no pé do seu ouvido. Estava todo ensanguentado, com o nariz quebrado e o que pareciam ser queimaduras de cigarro no antebraço. 
 Ainda se recuperava do sumbido, quando se viu agarrando o homem que gritava o nome Kátia. Os quatro peritos apareceram correndo para auxiliá-lo. Dois deles colocaram-no em uma maca e o levaram para o Hospital Souza Aguiar. 
@@ -101,540 +222,9 @@ Timérius respirou fundo, olhou para os outros dois peritos que ali ficaram e, s
 Olhou as estantes. Havia alguns porta-retratos e em quase todos a vítima estava com um mulher, muito parecida com ele. Silvestre presumiu ser sua irmã. Seria ela a tal Kátia?]]
 
 
-==><==
-<img src="https://i.pinimg.com/originals/d4/35/06/d43506034cc0c5bd36213f6a2f769a7e.png" width=50%>
+==&gt;&lt;==
+&lt;img src=&quot;https://i.pinimg.com/originals/d4/35/06/d43506034cc0c5bd36213f6a2f769a7e.png&quot; width=50%&gt;
 
-(button:)[(link-undo: "voltar")]
-
-
-:: Casa de Junior Navalha {"position":"375,1750","size":"100,100"}
-Na casa de Navalha, acham o próprio. Timérius deve perguntar sobre Jaime e o que ele sabe vai ajudar a resolver o caso. Só passando por ele, se descobre o q aconteceu com Amilcar. Foi uma armação de Jaime contra Amilcar. Em represália por ele impedir que Jaime se relacionasse com sua irmã. Navalha devia uns favores para Jaime, então o ajudou arrumando uma confusão na pizzaria com Amilcar para que ele fosse mandado embora do trabalho. Isso é tudo o que Navalha sabia.
-(button:)[[Regente Feijó]] 
-(button:)[[Caso 1 - Delegacia]] 
-
-
-:: Caso 1 - Delegacia {"position":"525,600","size":"200,200"}
-<!--colocar um mapa da parte do centro da cidade correspondente ao local que se passa o jogo. isso vai ajudar o jogador a se localizar e tb se desafiar a explorar as ruas se quiser e precisar.-->
-<!--
-- Contar o caso
-- Criar imput para o jogador escrever busca
-- colocar busca numa variavel
-- se a busca for válida, exibir resultados 
-- se a busca estiver vazia ou não for válida, não exibir resultado
--->
-=><===
-<img src="https://i.pinimg.com/originals/c2/8e/36/c28e365d378f9ff03342e1ddc3926df0.png" width=150%>
-
-<====>
-(if: $tempo is 0)[
-<====>
-(text-colour:(hsl:60,0.8039,0.5,0.5))[//No departamento de polícia, a delegada Ferreira lutava para sair do elevador com sua cadeira de rodas. 
-Logo, um dos novatos chamado Jonas veio ajudá-la. 
-A delegada o agradeçeu enquanto era conduzida por entre as mesas e policiais trabalhando.
-Não demoraram muito, entretanto, mal chegaram a sua sala e o telefone já tocava.// ]
-
-(text-colour:grey)[Era um senhor muito nervoso dizendo ser zelador de um prédio no centro da cidade localizado na Rua Gomes Freire, número 7 — esquina com Av. Rio Branco. 
-Ele contou que achara um dos moradores mortos. Seu nome, Amilcar Cordeiro. 
-O zelador, de nome Aguinaldo, não tinha muita coisa a relatar. Apenas que no dia anterior uma pessoa não identificada havia interfonado para o apartamento 103. 
-=><===
-<img src="https://i.pinimg.com/originals/33/fe/28/33fe28b444677949f7f8be6f40db0563.jpg" width=150%>
-==><==
-//Cena do Crime//
-
-<====>
-Timérius chegou quinze minutos depois. Número do apartamento da ocorrência: 101. O policial civil foi o primeiro a adentrar no recinto. No meio da sala, virado para a janela que dava para o fundo mal iluminado e sem janelas de um outro prédio, estava o homem mal amarrado a uma cadeira. O policial sacou a arma e examinou os outros cômodos, sem que nada lhe chamasse a atenção. 
-Finalmente se aproximou da vítima. Sua posição, cuja cabeça e parte do corpo estavam caidos para o lado direito, parecia estar forçando o centro de gravidade e prestes a se derrubar no chão com a cadeira. Depois de um breve exame, percebeu que havia um papel ensanguentado dentro do bolso de sua camisa. Ao fazer o movimento para pegá-lo, Timérius quase caiu para trás pelo tremendo susto que levou. O cadaver voltou a vida, dando um berro no pé do seu ouvido. Estava todo ensanguentado, com o nariz quebrado e o que pareciam ser queimaduras de cigarro no antebraço. 
-Ainda se recuperava do sumbido, quando se viu agarrando o homem que gritava o nome Kátia. Os quatro peritos apareceram correndo para auxiliá-lo. Dois deles colocaram-no em uma maca e o levaram para o Hospital Souza Aguiar. 
-Timérius respirou fundo, olhou para os outros dois peritos que ali ficaram e, sem dizer nenhuma palavra, continuou no exame da cena. Haviam dois tipos de pegadas no chão, mas eram desconcertantes. O que conseguiu distinguir foi que uma era de sapato social e a outra de tênis. Num exame mais minucioso, ele percebeu que as de sapato só tinham marcar de pés esquerdos e a do tênis só tinham de pés direitos. Pensou um pouco sem enxergar um motivo claro para isso.
-Olhou as estantes. Havia alguns porta-retratos e em quase todos a vítima estava com um mulher, muito parecida com ele. Silvestre presumiu ser sua irmã. Seria ela a tal Kátia?]
-=><===
-<img src="https://i.pinimg.com/originals/6e/78/04/6e78045e9b81afb946cb4451a17677de.jpg" width=150%>
-]
-
-(if: $tempo is 1)[
-(text-colour:(hsl:60,0.8039,0.5,0.5))[//Enquanto tentava juntar as pistas, um auxiliar de escritório deixou um envelope em cima da sua mesa, dizendo 'boa tarde'. O resultado do exame pisicotécnico, com pedido de consulta ao psicólogo da corporação. Ferreira riu e pensou: 'Fui chamada no RH. 
-Mas agora ela não tinha tempo pra isso. Depois pensaria no seu acidente.
-
-Estava claro que esse caso daria mais trabalho do que a detetive tinha imaginado. Por isso, registrou num caderno todas as pistas que sua equipe tinha juntado até agora.//]
-
-(button:)[[📝|Caderno de Anotações]]
-]
-
-(if: $tempo is 2)[
-(set: $anotacoes to true)
-<!--colocar nas passagens -> if: $anotacoes is true -> mostre [caderno de anotações]-->
-(button:)[[📝|Caderno de Anotações]]
-
-(button:)[[Mapa]] 
-
-]
-(if: $tempo is 3)[
-(if: $fotoCortadaJaime is true and $fotoCortadaKatia is true)[Timérius conseguiu achar as duas partes da única foto encontrada até agora onde estão Kátia e Jaime juntos. A parte da Kátia estava praticamente escondida dentro no armários guarda-roupas. A de Jaime estava exposta no melhor lugar da estante da sala. Ele mostrou para sua chefe. Ferrreira ficou pensativa por um momento. 'Que lugar era aquele onde estavam?', ele pensou alto e Timérius achou a dúvida pertinente.]
-(button:)[[📝|Caderno de Anotações]]
-
-(button:)[[Mapa]]
-]
-(if: $tempo is 4)[ (set: $caso1 to true)Você resolveu o Caso da Rua Gomes Freire!!! Vá para a próxima parte!
-(button:)[[Início|Início]]]
-==><==
-<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "101" or "apartamento")[(button:)[[101|101]]]
-(if: (lowercase: $search) contains "103" or "apartamento" or "vizinho")[(button:)[[103]]]
-(if: (lowercase: $search) contains "7" or "prédio" or "edifício")[(button:)[[Gomes Freire, número 7|Gomes Freire, número 7]]]
-(if: (lowercase: $search) contains "gomes" or "freire" or "rua")[(button:)[[Rua Gomes Freire, altura do número 7|Rua Gomes Freire]]]
-(if: (lowercase: $search) contains "zelador")[(button:)[[Zelador do prédio|Zelador]]]
-(if: (lowercase: $search) contains "papel" or "bilhete" or "bolso")[(button:)[[Papel no bolso da vítima|Papel no bolso]]]
-(if: (lowercase: $search) contains "katia" or "irmã")[(button:)[[Katia|Kátia]]]
-(if: (lowercase: $search) contains "hospital" or "souza" or "aguiar")[(button:)[[Hospital Souza Aguiar]]]
-(if: (lowercase: $search) contains "regente" or "feijó")[(button:)[[Regente Feijó|Regente Feijó]]]
-(if: (lowercase: $search) contains "constituição" )[(button:)[[Rua da Constituição|Rua da Constituição]]]
-(if: (lowercase: $search) contains "jaime" and "kátia" )[[[Antiga casa de Kátia|Antiga casa de Kátia]]]
-(if: (lowercase: $search) contains " " or false)[]
-(else:)[]]]
-
-
-
-<audio src="https://mccliaosh-fiick-skierm.yolasite.com/ws/media-library/997cb3b2644243e2a07f9d976c526157/videoplayback-_3_.mp3" autoplay loop>
-
-
-:: Caso 2 - Delegacia {"position":"2625,450","size":"100,100"}
-(if: $caso1 is false)[ (text-colour:(hsl:0,0.8039,0.5,0.75))[//Você ainda não resolveu o Primeiro Caso//]](else:)[]
-
-
-
-:: Comércio Local {"position":"650,1100","size":"100,100"}
-(if: $tempo is 1)[(set: $tempo to $tempo + 1)]
-
-(button:)[[Rua Gomes Freire]] 
-(button:)[[Prédios nas redondezas]] 
-
-<!--aqui deve-se colocar um caminho para as ruas importantes sem muita explicação. para o jogador explorar se quiser. pode-se talvez colocar um mapa dessa parte do centro da cidade-->
-
-
-:: Dono do bar na regente feijó {"position":"500,1625","size":"100,100"}
-(text-colour:grey)[//Timérius conversa com o dono do bar.//]
-(button:)[[boteco]] 
-
-<!--aqui deve-se perguntar para o dono do bar para ter acesso as residências abaixo. -->
-
-(button:)[[Casa de Junior Navalha]] 
-
-(button:)[[apartamento de Jaime]]
-
-
-
-
-:: Entrar na Parte 1 {"position":"575,450","size":"100,100"}
-==><==
-<img src="https://i.pinimg.com/originals/d4/35/06/d43506034cc0c5bd36213f6a2f769a7e.png" width=50%>
-######(text-colour:#868e96)[(checkbox-fullscreen: "Fullscreen mode")]
-(set: $hospital to 0)(set: $tempo to 0)
-(button:)[[Parte 1 - Sequestro da Rua Gomes Freire|Caso 1 - Delegacia]] 
-
-
-
-
-
-:: Entrar no Jogo [entrar] {"position":"1600,50","size":"100,100"}
-==><==
+(button:)[(link-undo: &quot;voltar&quot;)]</tw-passagedata><tw-passagedata pid="14" name="Entrar no Jogo" tags="entrar" position="1600,50" size="100,100">==&gt;&lt;==
 ####(text-colour:navy)+(bg:(gradient: 0, 0,#e5e619,0.5,#ffffff,1,#e5e619))[[[Entrar no Jogo|Início]] ]
-(set: $caso1 to false)(set: $caso2 to false)
-
-
-:: Gomes Freire, número 7 [tempo-1] {"position":"350,950","size":"100,100"}
-(if: $tempo is 0)[(set: $tempo to $tempo + 1)]
-=><===
-
-<img src="https://i.pinimg.com/originals/5b/a5/24/5ba524a541607a7c7094aafb907b488a.jpg" width=150%>
-
-
-<====>
-(text-colour:grey)[
-(button:)[[101]]
-
-(button:)[[103]]
-
-(button:)[[bar]]
-
-(button:)[[Voltar para a Delegacia|Caso 1 - Delegacia]] 
-
-]
-
-
-
-:: Homens bebendo {"position":"225,1200","size":"100,100"}
-Timérius se aproxima dos homens bebendo à mesa
-==><==
-#####(button:)[(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
-<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(link-rerun: "(text-colour:#999900)[^^//''RELACIONAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "foto" or "amilcar")[(set: $orlando to true)Orlando, um dos homens diz que conhece Amilcar. Mora no prédio ao lado do dele e sempre o vê por ali. [[Conversar com Orlando|Orlando]]]]]
-
-
-:: Hospital Souza Aguiar [tempo-1] {"position":"475,950","size":"100,100"}
-(if: $tempo is 0)[(set: $tempo to $tempo + 1)]
-(if: $hospital is 0)[
-Amilcar está em coma induzido. Timérius tentaria voltar mais tarde.
-#####(text-colour:#999900)[Timérius pode perguntar algo para a enfermeira]
-<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "visit" or "alguém" or "recebeu")[Alguém visitou Amilcar ]
-(if: (lowercase: $search) contains "quem" or "visit" or "saber")[ Nas câmeras do hospital, mais uma vez, Timérius viu o suspeito de boné, óculos escuro e mancando da perna esquerda.]
-]]
-
-]
-(else-if: $hospital is 1)[
-Amilcar acordou algumas vezes chamando constantemente a irmã, mas ainda não está estavel. Timérius tentaria voltar mais tarde.
-]
-(else-if: $hospital >= 2)[
-Amilcar está lúcido. Ele conta que o ex-namorado de Kátia que o secrestrou e agrediu porque ele estava impedindo que Jaime visse a sua irmã. Ele segura o braço de Timérius e diz que tem receio de Jaime ter feito algo com sua irmã. Ele não havia conseguido falar com ela há dois dias. E eles se falavam todos os dias ]
-#####(text-colour:#999900)[Timérius pode perguntar algo para Amilcar]
-<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "onde" or "mora" or "Jaime")[Ele mora na Regente Feijó. É tudo o que Amilcar sabe. ]
-(if: (lowercase: $search) contains "onde" or "kátia" or "morava")[Kátia morava na Gomes Freire, mais próxima ainda de Amilcar. [[Antiga casa de Kátia]]]
-]]
-
-==><==
-
-(button:)[[Delegacia|Caso 1 - Delegacia]] 
-
-
-:: Início {"position":"1600,200","size":"100,100"}
-==><==
-######(text-colour:#868e96)[(checkbox-fullscreen: "Fullscreen mode")]
-
-<img src="https://i.pinimg.com/originals/95/3e/f5/953ef5844d9137c02c3a49bb2d82ebdf.png" width=100%>
-==><==
-#####(text-colour:#868e96)[Criação: Lucas Estrela]
-
-<img src="https://i.pinimg.com/originals/5c/17/47/5c1747cb554f41ab6eaae1c7323c2126.jpg" width=100%>
-
-######(text-colour:#868e96)[Detetive Ferreira e companhia]
-<====>
-(if: $caso1 is false)[
-(text-colour:#868e96)[(button:)[[Sequestro da Rua Gomes Freire|Entrar na Parte 1]]] ]
-(else:)[(text-colour:grey)[//Primeira parte já foi resolvida//]]
-(if: $caso2 is false)[
-(text-colour:#868e96)[(button:)[[Caso 2 - Delegacia]]]]
-(else:)[]
-
-
-:: Kátia [tempo-1] {"position":"975,950","size":"100,100"}
-(set: $katia to true)
-(text-colour:grey)[A delegada Ferreira pesquisa nos arquivos públicos. Kátia é a irmã de Amilcar.
-Em seus registros, descobrem que ela mora também no centro da cidade, muito próximo dalí. Trabalha numa empresa de telefonia perto da rua da carioca. ]
-
-==><==
-(text-colour:#999900)[Porque será que Amilcar gritava o nome de sua irmã?]
-(text-colour:grey)[<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "empresa" or "carioca" or "telefonia" or "trabalh")[Numa consulta rápida por telefone, Ferreira descobre que ela está viajando há uma semana. Sem contato por telefone ou mensagem, está num vilarejo do interior do Rio onde o sinal de telefonia é quase inexistente. Vale a pena manda Timérius lá pessoalmente. [[trabalho da Kátia]]]
-(if: (lowercase: $search) contains "mora" or "casa" or "residência" or "apartamento" or "ir" or "procura")[Timérius teve a ideia de ir até o prédio onde Kátia reside. [[Rua da Constituição]]]
-]]]
-
-
-(button:)[(link-undo:"voltar")]
-
-
-:: Loja de música {"position":"1200,1225","size":"100,100"}
-Ninguém sabe de nada.
-(button:)[[Rua da Constituição]] 
-
-
-:: Mapa [MAPA] {"position":"1075,1650","size":"200,200"}
-==><==
-(text-colour:grey)[//Mapa da Localidade//]
-<====>
-<img src="https://i.pinimg.com/originals/b4/9c/ce/b49cce2ca2d5ab571ba6154729edc4d0.png" width=100%>
-
-(button:)[[Rua Gomes Freire]] 
-(button:)[[Regente Feijó]] 
-(button:)[[Rua da Constituição]] 
-
-
-(button:)[[Hospital Souza Aguiar]] 
-(button:)[[Delegacia de polícia|Caso 1 - Delegacia]] 
-
-
-:: Mini-Mercado {"position":"1200,1100","size":"100,100"}
-(button:)[[Rua da Constituição]] 
-
-
-:: Orlando {"position":"225,1325","size":"100,100"}
-
-==><==
-(text-colour:grey)[//Timérius conversa com Orlando, que não está muito afin de papo. Entretanto, se sente obrigado a falar quando Timérius mostra o distintivo da policia civil. //]
-
-#####(button:)[(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
-<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(link-rerun: "(text-colour:#999900)[^^//''RELACIONAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "imagem" or "câmera" or "suspeiro" or "manca" or "perna" or "esquerda")[Orlando arregala os olhos. Ele também o conhecia. Aquele é o Jaime, disse Orlando olhando para o chão. Quando olhou para o detetive sua expressão era de preocupação. Jaime era um cara problemático. Não sabia exatamente qual era o motivo, mas soube que os dois, Amilcar e Jaime, andaram discutindo no bar há algumas semanas atrás.]
-(if: (lowercase: $search) contains "junior" or "navalha" or "local" or "malandro")[
-Orlando não sabia de nada muito específico sobre o Junior Navalha, apenas que seu reduto também era ali perto na Regente Feijó, mesma rua onde mora o Jaime. (button:)[[Regente Feijó]] (set: $regenteFeijo to true)]
-]]
-
-
-
-:: Papel no bolso [tempo-1] {"position":"850,950","size":"100,100"}
-(if: $tempo is 0)[(set: $tempo to $tempo + 1)](set: $papel to true)(set: $taki to true)
-<====>
-(text-colour:grey)[Um recibo de uma loja de material de construção chamada Takí com um número de telefone escrito a lápis no verso, salpicado de sangue. A compra da nota, feita há uma semana atrás, foi de um pedaço de corda. Possivelmente a mesma corda usada no crime.
-A perícia descobriu que os números no papel ensanguentado correspondem ao número da pizzaria da qual Timérius achara o cartão no apartamento de Amilcar.]
-
-==><==
-#####(text-colour:#999900)[A Delegada tem que investigar isso...]
-<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "takí" or "material" or "construção" or "loja")[[[Takí|Takí, Material de Construção]]]
-(if: (lowercase: $search) contains "telefone" or "número" or "verso" or "pizzaria")[[[Pizzaria|pizzaria]]]
-]]
-
-
-#####(button:)[(link-undo:"voltar")]
-
-
-:: Passagem Sem Nome {"position":"100,0","size":"100,100"}
-
-
-
-:: Prédios nas redondezas {"position":"525,1100","size":"100,100"}
-(button:)[[Rua Gomes Freire]] 
-
-(button:)[[Comércio Local]] 
-
-
-
-
-:: Regente Feijó [tempo-2] {"position":"500,1300","size":"100,100"}
-(if: $tempo is 1)[(set: $tempo to $tempo + 1)]
-==><==
-(text-colour:grey)[//Rua Regente Feijó//
-Timérius teria que perguntar por ai para continuar a investigação.
-
-(button:)[[sebo]]
-
-(button:)[[boteco]]
-
-(button:)[[loja de eletrônicos]]]
-
-
-
-
-
-(button:)[[Caso 1 - Delegacia]] 
-
-
-
-:: Rua Gomes Freire [tempo-2] {"position":"600,950","size":"100,100"}
-(if: $tempo is 1)[(set: $tempo to $tempo + 1)]
-
-<!--aqui tem q ser colocado vários estabelecimentos e no meio as moradas de kátia e jaime para serem achadas por dedução a partir das pistas. Alguns prédios de apartamentos e algumas lojas para Timérius investigar e fazer perguntas-->
-Timérius anda pela Rua Gomes Freire. O que procurar? Ele pensa.
-(if: $cameraBar is true or $cameraTaki is True)[
-Timérius tem em mãos as imagens do suspeito e da vítima para mostrar. Em uma rápida olhada pela rua, viu uma loja de roupas, uma loja de música, um outro bar, uma pastelaria, um pequeno restaurante. Havia também alguns prédios residenciais e comerciais. Por onde Timérius começaria sua busca?]
-
-
-(button:)[[Comércio Local]]
-(button:)[[Prédios nas redondezas]]
-
-(button:)[[Delegacia|Caso 1 - Delegacia]] 
-
-
-
-
-:: Rua da Constituição [tempo-1] {"position":"1075,1100","size":"100,100"}
-(if: $tempo is 0)[(set: $tempo to $tempo + 1)](set: $hospital to $hospital +1)
-<====>
-(text-colour:grey)[Timérius chega no prédio em que Kátia morava. Fica na Rua da Constituição muito próximo ao prédio de Amilcar, na Gomes Freire. 
-(button:)[[Bar ao lado]]
-(button:)[[Loja de música]]
-(button:)[[Mini-Mercado]]
-(button:)[[Caso 1 - Delegacia]] 
-]
-
-
-==><==
-(text-colour:#999900)[O que timérius vai perguntar para o zelador do prédio de Kátia?]
-(text-colour:grey)[<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "quando" or "viaj" or "férias" or "saiu")[Ela viajou a quase um mês atrás ]
-(if: (lowercase: $search) contains "alguém" or "visit" or "frequent")[O irmão dela vem aqui com frequência. Há uns meses atrás ela namorou um cara, mas eles brigaram.]
-(if: (lowercase: $search) contains "quem" or "namorad" or "companheir" or "frequent" or "companhia")[Há uns meses atrás ela namorava um cara, mas eles brigaram.]
-(if: (lowercase: $search) contains "como" or "é" or "era" or "ex" or "namorad")[Ele era loiro, baixo e tinha um problema na perna. Não lembro o nome dele, disse o zelador.]
-(if: (lowercase: $search) contains "chave" or "abr" or "apartamento" or "porta")[Timérius pede que o zelador abra a porta do [[apartamento de Kátia]]]
-(if: (lowercase: $search) contains " " or false)[]
-]]]
-
-
-:: Takí, Material de Construção {"position":"925,1100","size":"100,100"}
-<====>
-(set: $taki to true)
-(text-colour:grey)[Ao questionar o dono da loja Takí, ele reconheceu Amilcar na foto que o investigador lhe mostrou. A compra da nota, feita há uma semana atrás, foi de um pedaço de corda. Possivelmente a mesma corda usada no crime.]
-==><==
-#####(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
-<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(button:)[(link-rerun: "(text-colour:#999900)[^^//''RELACIONAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "camera" or "vigilancia" or "alguem" or "acompanh" or "quant" or "pessoa")[(set: $cameraTaki to true)Timérius pergunta se havia alguém acompanhando Amilcar quando ele veio comprar o pedaço de corda. O atendente disse que sim. A câmera do estabelecimento gravou quando Amilcar, visivelmente nervoso, entrou e alguém ficou esperando do lado de fora. Não era possível ver o seu rosto, mas foi possível intentificar o andar peculiar do criminoso, mancando da perna esquerda. O atendendte da loja também disse que o suspeito acompanhando Amilcar era loiro.]]]
-
-(button:)[[Caso 1 - Delegacia]] 
-
-
-:: Voz Alta {"position":"375,1625","size":"100,100"}
-<!--Timérius deve perguntar, mas só vão conhecer o Navalha-->
-(button:)[[Casa de Junior Navalha]]
-[[boteco]] 
-
-
-:: Zelador {"position":"350,675","size":"100,100"}
-O zelador só sabe o que contou para os policiais.
-
-(button:)[(link-undo:"voltar")]
-
-
-:: algum cliente {"position":"225,1500","size":"100,100"}
-<!--Ninguém vai responder nada satisfatório-->
-(button:)[[boteco]] 
-
-
-:: apartamento de Jaime [tempo-2] {"position":"500,1500","size":"100,100"}
-(if: $tempo is 1)[(set: $tempo to $tempo + 1)]
-==><==
-(text-colour:grey)[//A Casa de Jaime//]
-(text-colour:#999900)[Timérius pode investigar qualquer parte da casa.]
-(text-colour:grey)[<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "banheiro")[Não há nada]
-(if: (lowercase: $search) contains "quarto")[Não há nada]
-(if: (lowercase: $search) contains "sala")[(set: $tempo to 3)(set: $fotoCortadaJaime to true)(if: $fotoCortadaKatia is true)[Na estante da sala, Timérius acha uma foto cortada no meio. Nela, está Jaime feliz e sorridente, abraçado com alguém que não pode ser identificado. Timérius tinha plena certza de que era Kátia na outra parte da foto.](else:)[Na estante da sala, Timérius acha uma foto cortada no meio. Nela, está Jaime feliz e sorridente, abraçado com alguém que não pode ser identificado. Ficou na outra parte da foto. Porém, é possível ver que ele está numa varanda para alguma rua que Timérius reconhecia, mas não sabia dizer qual. Timérius tinha quase certeza que era por ali perto.] ]
-(if: (lowercase: $search) contains "serviço" or "área")[Não há nada]
-(if: (lowercase: $search) contains "cozinha")[Não há nada]
-]]
-]
-(button:)[[Regente Feijó]] 
-
-
-:: apartamento de Kátia [tempo-2] {"position":"1200,975","size":"100,100"}
-(if: $tempo is 1)[(set: $tempo to $tempo + 1)](set: $apartamentoKatia to true)
-<====>
-Ao abrir a porta do apartamento de Kátia, Timérius e o zelador do prédio sentiram um cheiro forte vindo de lá dentro. Os dois se entreolharam. Devagar, Timérius adentrou o recinto. Algumas coisas já chamaram sua atenção. Roupas jogadas num canto numa casa de mulher. Algo incomum. "Kátia!", chamou o detetive. Apenas silêncio. Parecia que o cheiro vinha da cozinha. Alguns sacos de lixo em um dos cantos do cômodo revelaram a origem do cheiro desagradável. Restos de comida que pareciam ter mais de uma semana. Definitivamente, Timérius sentia que algo estava errado ali, mas não podia bater o martelo em relação a isso. Kátia poderia ter saido as pressas pelo simples motivo de estar atrasada para a viagem. Por isso, esqueceu de jogar o lixo fora e de colocar as roupas sujas no cesto. 
-
-
-==><==
-(text-colour:#999900)[Timérius poderia olhar as estantes, os outros cômodos ou olhar melhor a cozinha.]
-(text-colour:grey)[<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "estantes")[Nada de importante nas estantes da Sala]
-(if: (lowercase: $search) contains "banheiro")[Nada de importante no banheiro]
-(if: (lowercase: $search) contains "quarto")[[[armário do quarto|armário do quarto]]]
-(if: (lowercase: $search) contains "sala")[Nada de importante na sala]
-(if: (lowercase: $search) contains "serviço" or "área")[]
-(if: (lowercase: $search) contains "cozinha")[Em cima da mesa da cozinha, Timérius encontrou um pequeno caderno de anotações que continha alguns telefones. Achou prudente levar.]
-]]
-]
-(button:)[[Rua da Constituição]] 
-(button:)[[Delegacia|Caso 1 - Delegacia]] 
-
-
-:: armário do quarto {"position":"1325,1100","size":"100,100"}
-(set: $tempo to 3)(set: $fotoCortadaKatia to true)(if: $fotoCortadaJaime is true)[No armário do quarto, Timérius acha uma foto cortada. O estranho é que ela estava dentro de uma gaveta de meias. Na imagem estava Kátia feliz e sorridente, abraçada com alguém que ficou incógnita na outra parte da foto que foi cortada. Timérius tinha certeza de que Jaime na outra parte.](else:)[No armário do quarto, Timérius acha uma foto cortada. O estranho é que ela estava dentro de uma gaveta de meias. Na imagem estava Kátia feliz e sorridente, abraçada com alguém que ficou incógnita na outra parte da foto que foi cortada.]
-(button:)[(link-undo:"Voltar")]
-
-
-:: bar {"position":"225,1075","size":"100,100"}
-(text-colour:grey)[Do outro lado da rua, em frente ao prédio, há um bar. Timérius, como a foto de Amilcar em mãos, se aproxima do dono do bar para conversar. ](set: $hospital to $hospital +1)(set: $bar to true)
-
-(button:)[[Gomes Freire, número 7]] 
-(button:)[[Caso 1 - Delegacia]] 
-
-==><==
-#####(button:)[(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
-<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(link-rerun: "(text-colour:#999900)[^^//''RELACIONAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains"câmera" or "vigilância")[(set: $cameraBar to true)Pelas câmeras do bar eles conseguiram ver o suspeito. Havia apenas uma característica peculiar: ele mancava da perna esquerda.]
-(if: (lowercase: $search) contains "viu" or "alguém" or "noite" or "anterior" or "interfon")[(set: $cameraBar to true)Timérius questiona o dona se alguém interfonou na noite anterior. A resposta foi sim. Pelas câmeras do bar eles conseguiram ver o suspeito. Mancava da perna esquerda.]
-(text-colour:yellow)[(if: $cameraBar is true)[Quatro homens bebendo e conversando estão sentados em uma das mesas. Timérius pode puxar conversa com os homens na mesa [[Homens bebendo]]] ]
-(if: (lowercase: $search) contains "conhec" or "sabe" or "frequent")[ O dono do bar diz o indivíduo não lhe parece estranho. Talvez morasse pelas redondezas. ]
-
-]]
-
-<!--colocar busca aqui tb. tirar esse texto e colocar o link pra descobrir se tem câmera, se alguem do prédio vem ao bar e tal.-->
-
-
-:: boteco {"position":"375,1500","size":"100,100"}
-No boteco, Timérius pode perguntar qualquer coisa.
-Perguntar em voz alta (button:)[[Voz Alta]]
-Falar com o dono do bar (button:)[[Dono do bar na regente feijó]]
-Escolher algum cliente (button:)[[algum cliente]]
-
-
-:: loja de eletrônicos {"position":"775,1500","size":"100,100"}
-[[Regente Feijó]] 
-Ninguém sabe de nada
-
-
-:: pizzaria {"position":"800,1100","size":"100,100"}
-<====>
-(set: $pizzaria to true)
-(text-colour:grey)[Conversando com o dono local chamado Fábio, descobre que Amilcar trabalhava na pizzaria até algumas semanas atrás. Ele foi demitido por causa de uma briga não esclarecida dentro do estabelecimento. Algo sobre uma dívida que vieram cobrar a ele. Ele negou tudo na época, mas os donos preferiram demiti-lo. O cara que veio cobrar-lhe a dívida foi um malandro local, conhecido como Junior Navalha. Na pizzaria haviam três funcionários que poderia interrogar. O cozinheiro chamado Júlio e os dois garsons, Natan e Fred. ]
-
-
-==><==
-#####(button:)[(text-colour:#999900)[Timérius tenta relacionar alguma pista à conversa. Pode ser possível descobrir algo, quem sabe...]
-<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(link-rerun: "(text-colour:#999900)[^^//''RELACIONAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "fred" or "garçon" or "garçons")[]
-(if: (lowercase: $search) contains "natan" or "garçon" or "garçons")[]
-(if: (lowercase: $search) contains "júlio" or "cozinheiro" or "cozinha")[]
-(if: (lowercase: $search) contains "jaime")[]
-(if: (lowercase: $search) contains "kátia")[]
-(if: (lowercase: $search) contains "navalha")[]
-]]
-
-(button:)[[Caso 1 - Delegacia]] 
-
-
-:: sebo {"position":"650,1500","size":"100,100"}
-[[Regente Feijó]] 
-Ninguém sabe de nada. Mas já viram a Kátia por ali.
-
-
-:: trabalho da Kátia {"position":"1200,850","size":"100,100"}
-(text-colour:grey)[//Ferreira liga para o RH da empresa em que Kátia trabalha. O que vai perguntar?//
-]
-==><==
-#####(text-colour:#999900)[A Delegada tem que investigar isso...]
-<!--descrever o local de trabalho de Kátia-->
-<img src="https://i.pinimg.com/originals/a3/3f/e4/a33fe427263a36e63fab217c9a323cfb.png" width=40%>
-####(button:)[(link-rerun: "(text-colour:#999900)[^^//''INVESTIGAR''//^^//''AS PISTAS''//]")[
-(set: $search to (prompt: [Investigar...], "-", "",))
-(if: (lowercase: $search) contains "férias")[Kátia está de férias a três semanas. Há uma semana atrás ela mandou uma mensagem para sua chefe dizendo que faria uma viagem rápida de uma semana antes do fim das férias, mas para ficarem despreocupados no trabalho pois ela voltaria na data esperada. Portanto, ainda faltava uma semana para o fim das férias de Kátia. Teoricamente, ela estava dentro do prazo que estabeleceu. Mas o que a chefe de Kátia relatou é que não parecia comum ela avisar isso. Geralmente, os funcionários só voltam a fazer contato nos últimos dias de férias, confirmando sua volta e apenas isso. Não costumam se comunicar no meio dos dias de descanso para dizer que vai viajar. Não fazia muito sentido. Timérius anotou isso. ]
-(if: (lowercase: $search) contains " " or false)[]
-]]
-
-
-:: StoryScript [script]
-var audio = document.createElement("audio");
-audio.src = "https://mccliaosh-fiick-skierm.yolasite.com/ws/media-library/f576455fa24b42fb8f8a8d65a1cc763d/videoplayback-3.m4a";
-audio.loop = true;
-audio.play();
-
-:: StoryStylesheet [stylesheet]
-tw-text {border: opacity 0.1;}
-
-[tags="entrar"] { background-image:url(https://i.pinimg.com/originals/82/b8/28/82b828b4796a8a49f1869e16de13349c.png);   
-  background-size:100%;   background-repeat: no-repeat;   }
+(set: $caso1 to false)(set: $caso2 to false)</tw-passagedata><tw-passagedata pid="15" name="Caso 2 - Delegacia" tags="" position=... (466 KB restante(s))
